@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+    /*  1rem = 10px */
+    font-size: 62.5%;  
+}
+
+body {
+    height: 100vh;
+    padding: 3.5rem;
+    font-size: 1.6rem;
+    font-family:"Raleway", sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    color: #2a2a2a;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation */
+nav#main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+ul#main-nav--list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    
+}
+
+ /* navigation lis */
+li.main-nav--links {
+    padding: 2rem 3rem;
+    margin-right: .5rem;
+}
+
+li.main-nav--links {
+    border-top: 2px solid transparent;
+    transition: border-top 1s;
+}
+
+li.main-nav--links:hover,
+li.main-nav--links:active {
+    border-top: 2px solid #0065FC;
+}
+
+/* navigation links */
+li.main-nav--links a {
+    transition: color 1s;
+}
+
+li.main-nav--links a:link,
+li.main-nav--links a:visited {
+    color: #2a2a2a;
+}
+
+li.main-nav--links a:hover,
+li.main-nav--links a:active {
+    color: #0065FC;
+}
+
+li#main-nav--signup a {
+    font-weight: 500;
+    color: #0065FC;
+}
+
+
+
