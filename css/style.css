@@ -1,3 +1,7 @@
+/***********************************************************/
+/*** GLOBAL CONFIGURATION ***/
+
+
 *,
 *::before,
 *::after {
@@ -24,6 +28,9 @@ body {
 a {
     text-decoration: none;
 }
+
+/***********************************************************/
+/*** MAIN NAVBAR ***
 
 /* Navigation */
 nav#main-nav {
@@ -72,9 +79,56 @@ li.main-nav--links a:active {
 }
 
 li#main-nav--signup a {
-    font-weight: 500;
+    font-weight: 700;
     color: #0065FC;
 }
+
+/***********************************************************/
+/*** HOME PAGE TITLE ***/
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+p#title--subtitle {
+    font-size: 1.4rem;
+    margin-top: .8rem;
+}
+
+/***********************************************************/
+/*** SEARCH BAR ***/
+
+#search-bar--container {
+    width: fit-content;
+    margin-top: 2rem;
+    border: 1px solid #f2f2f2;
+    border-radius: 2.5rem;
+}
+
+.search-bar--item {
+    padding: 1.5rem;
+}
+
+#search-bar {
+    font-family: inherit;
+    font-weight: 700;
+    border: none;
+}
+
+#search-bar--btn {
+    background-color: #0065FC;
+    color: #fff;
+    font-weight: 700;  
+    border-radius: 0 2.5rem 2.5rem 0;
+}
+
+#search-bar--icon {
+    background-color: #f2f2f2;
+    border-radius: 2.5rem 0 0 2.5rem;
+}
+
 
 
 
