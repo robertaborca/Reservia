@@ -17,13 +17,19 @@ html {
 
 body {
     height: 100vh;
-    padding: 3.5rem;
-
     font-size: 1.5rem;
     font-family:"Raleway", sans-serif;
     font-weight: 300;
     text-rendering: optimizeLegibility;
     color: #1B1212;
+}
+
+main {
+    padding: 0 3.5rem 3.5rem 3.5rem;
+}
+
+header {
+    padding: 3.5rem 3.5rem 0 3.5rem;
 }
 
 a {
@@ -41,6 +47,10 @@ a:active {
     color: #0065FC;
 }
 
+ul {
+    list-style: none;
+}
+
 /***********************************************************/
 /*** MAIN NAVBAR ***
 
@@ -54,9 +64,7 @@ nav#main-nav {
 
 ul#main-nav--list {
     display: flex;
-    justify-content: space-around;
-    list-style: none;
-    
+    justify-content: space-around;    
 }
 
  /* navigation lis */
@@ -457,9 +465,31 @@ div.activities-section--activities-single-images {
 }
 
 
+/***********************************************************/
+/*** FOOTER ***/
+#footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 
+    margin-top: 5rem;
+    background-color: #f2f2f2;
+}
 
+.footer--sections {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.5rem;
 
+    flex: 1;
+    padding: 3.5rem;
+}
+
+.footer--links {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 8px;
+}
 
 
 
