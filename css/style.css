@@ -18,6 +18,7 @@ html {
 body {
     height: 100vh;
     padding: 3.5rem;
+
     font-size: 1.5rem;
     font-family:"Raleway", sans-serif;
     font-weight: 300;
@@ -27,6 +28,17 @@ body {
 
 a {
     text-decoration: none;
+    transition: all 1s;
+}
+
+a:link,
+a:visited {
+    color: #1B1212;
+}
+
+a:hover,
+a:active {
+    color: #0065FC;
 }
 
 /***********************************************************/
@@ -63,21 +75,6 @@ li.main-nav--links:active {
     border-top: 2px solid #0065FC;
 }
 
-/* navigation links */
-li.main-nav--links a {
-    transition: color 1s;
-}
-
-li.main-nav--links a:link,
-li.main-nav--links a:visited {
-    color: #2a2a2a;
-}
-
-li.main-nav--links a:hover,
-li.main-nav--links a:active {
-    color: #0065FC;
-}
-
 li#main-nav--signup a {
     font-weight: 700;
     color: #0065FC;
@@ -101,7 +98,7 @@ p#title--subtitle {
 /*** SEARCH BAR ***/
 
 #search-bar--container {
-    width: fit-content;
+    max-width: fit-content;
     margin-top: 2rem;
     border: 1px solid #f2f2f2;
     border-radius: 2.5rem;
@@ -151,18 +148,18 @@ p#title--subtitle {
 /*** FILTERS ***/
 
 #filters--container {
-    margin-top: 3rem;
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
-    justify-content: stretch;
+    margin-top: 3rem;
     font-weight: 700;
 }
 
 ul#filters--list {
     display: flex;
     align-items: center;
-    list-style: none;
     margin-left: 2.5rem;
+    list-style: none;
 
 }
 
@@ -244,13 +241,10 @@ a#show-more {
 
 a#show-more:link,
 a#show-more:visited {
-    color:#1B1212;
     font-weight: 700;
-    transition: color 1s;
 }
 
-a#show-more:hover,
-a#show-more:active {
+div.accomodations-cards--card:hover a {
     color: #0065FC;
 }
 
@@ -260,7 +254,7 @@ a#show-more:active {
 div#accomodations-cards--container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
 div#accomodations-cards--container section {
@@ -276,15 +270,21 @@ div#accomodations-cards--container section {
 /*CARDS*/
 div.accomodations-cards--card {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: center;
-    flex-basis: 30%;
     gap: 8px;
 
+    flex: 1 30%;
     padding: 5px;
     background-color: #fff;
     border-radius: 2.5rem;
     box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+div.accomodations-cards--card:hover {
+    transform: scale(1.1);
 }
 
 /*HOTEL INFO*/
@@ -294,14 +294,19 @@ div.accomodations-cards--info-container h3 {
 
 div.accomodations-cards--info-container {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     gap: 4px;
-    font-size: 1.3rem;
+
     padding-left: 1rem;
     padding-bottom: .5rem;
+    font-size: 1.3rem;
 }
 
 /*HOTEL IMGS*/
+div#accomodations-cards--container figure {
+    width: 100%;
+}
+
 div#accomodations-cards--container figure img {
     width: 100%;
     object-fit: cover;
@@ -340,13 +345,13 @@ section#accomodations-cards--popular {
 
 section#accomodations-cards--popular
 div.accomodations-cards--popular-card {
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
 }
 
 div.accomodations-cards--popular-card figure {
-    flex-basis: 35%;
+    flex: 1 35%;
 }
 
 div.accomodations-cards--popular-card img.accomodations-cards--popular-images {
@@ -356,7 +361,7 @@ div.accomodations-cards--popular-card img.accomodations-cards--popular-images {
 
 section#accomodations-cards--popular
 div.accomodations-cards--info-container {
-    flex-basis: 60%;
+    flex: 1 60%;
     gap: 2rem;
 }
 
@@ -368,6 +373,93 @@ div.accomodations-cards--info-container {
 #accomodations-cards--popular--title-container i {
     font-size: 2.5rem;
 }
+
+
+/***********************************************************/
+/*** ACTIVITIES SECTION ***/
+
+section#activities-section {
+    margin-top: 5rem;
+}
+
+h2#activities-section--activities-title {
+    padding-left: 1rem;
+}
+
+div#activities-section--activities-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 4rem;
+}
+
+div#activities-section--activities-container h3 {
+    font-size: 1.3rem;
+    padding: 1.2rem 1.2rem 1.2rem 2rem;
+}
+
+div.activities-section--activities-double-images,
+div.activities-section--activities-single-images {
+    flex: 1 22%;
+}
+
+
+div.activities-section--activities-images-container {
+    border-radius: 2.5rem;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+    flex-grow: 1;
+    cursor: pointer;
+
+    transition: transform 1s;
+}
+
+div.activities-section--activities-images-container:hover {
+    transform: scale(1.1);
+}
+
+div.activities-section--activities-images-container:hover a {
+    color: #0065FC;
+}
+
+div#activities-section--activities-container img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+}
+
+div.activities-section--activities-double-images,
+div.activities-section--activities-single-images {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 4rem;
+}
+
+/* IMGS SIZES */
+#pomegues-fort {
+    height: 17rem;
+}
+
+#frioul-island {
+    height: 11rem;
+}
+
+#longchamp,
+#notre-dame {
+    height: 14rem;
+}
+
+#old-port,
+#calanques {
+    height: 90%;
+}
+
+
+
+
+
 
 
 
