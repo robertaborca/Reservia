@@ -35,10 +35,6 @@ main {
     padding: 0 3.5rem;
 }
 
-header {
-    padding: 3.5rem 3.5rem 0 3.5rem;
-}
-
 a {
     text-decoration: none;
     transition: all 1s;
@@ -64,32 +60,45 @@ ul {
 }
 
 /***********************************************************/
-/*** MAIN NAVBAR ***
+/*** HEADER & MAIN NAVBAR ***/
 
-/* Navigation */
+header {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 4rem;
+
+    padding-top: 3.5rem;
+}
+
+#header--logo {
+    padding-left: 3.5rem;
+    flex-grow: 2;
+}
+
+#main-nav--signup {
+    padding-right: 3.5rem;
+}
+
 #main-nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-#main-nav--list {
-    display: flex;
-    justify-content: space-around;
     flex-flow: row wrap;
-    gap: 4rem;    
+    align-items: center;
+    gap: 4rem;
 }
 
- /* navigation lis */
-.main-nav--links {
+ /* navigation links */
+.main-nav--links,
+#main-nav--signup {
     padding-top: 2rem;
     border-top: 2px solid transparent;
     transition: border-top 1s;
+    align-self: flex-start;
+    justify-self: flex-end;    
 }
 
 @media only screen and (hover:hover) {
-    .main-nav--links:hover {
+    .main-nav--links:hover,
+    #main-nav--signup:hover {
         border-top: 2px solid #0065FC;
     }
 }
@@ -98,7 +107,7 @@ ul {
     border-top: 2px solid #0065FC;
 }
 
-#main-nav--signup a {
+#main-nav--signup {
     font-weight: 700;
     color: #0065FC;
 }
@@ -113,7 +122,6 @@ h1 {
 }
 
 #title--subtitle {
-    font-size: 1.4rem;
     margin-top: .8rem;
 }
 
@@ -122,7 +130,11 @@ h1 {
 
 #search-bar--container {
     display: flex;
+    align-items: center;
+    max-width: -moz-fit-content;
+    max-height: -moz-fit-content;
     max-width: fit-content;
+    max-height: fit-content;
     margin-top: 2rem;
     border: 1px solid #f2f2f2;
     border-radius: 2.5rem;
@@ -131,6 +143,11 @@ h1 {
 .search-bar--item {
     padding: 1.5rem;
 }
+
+#search-bar--icon-lens {
+    display: none;
+}
+
 
 #search-bar {
     font-family: inherit;
@@ -377,7 +394,6 @@ h1 {
 .accomodations-cards--popular-card {
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: center;
 }
 
 .accomodations-cards--popular-card figure {
@@ -409,7 +425,7 @@ h1 {
 /*** ACTIVITIES SECTION ***/
 
 #activities-section {
-    margin-top: 5rem;
+    padding-top: 2rem;
 }
 
 #activities-section--activities-title {
@@ -435,9 +451,12 @@ h1 {
 
 
 .activities-section--activities-images-container {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    flex-grow: 1;
     border-radius: 2.5rem;
     box-shadow: 1px 1px 5px rgba(0,0,0,.2);
-    flex-grow: 1;
     cursor: pointer;
 
     transition: transform 1s;
