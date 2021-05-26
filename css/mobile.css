@@ -1,0 +1,166 @@
+/* media queries for mobile */
+
+/* breakpoint 480px */
+
+@media only screen and (max-width: 30em) {
+    main {
+        padding: 0 2rem;
+    }
+    /*header */
+    header {
+        font-size: 1.4rem;
+        gap: 0;
+        margin-bottom: 5rem;
+    }
+
+    #header--logo {
+        order: 1;
+        flex-basis: 50%;
+    }
+    
+    #main-nav--signup {
+        order: 2;
+    }
+
+    #main-nav {
+        flex-basis: 100%;
+        order: 3;
+        justify-content: space-between;
+
+        text-align: center;
+        border-bottom: 2px solid #f2f2f2;
+    }
+
+
+    #main-nav a {
+        border-top: none;
+        padding-bottom: 1.3rem;
+        flex-basis: 45%;
+    }
+
+    #main-nav a:first-child {
+        border-bottom: 2px solid #0065FC;
+        color:#0065FC;
+        font-weight: 700;
+    }
+
+    /*search bar */
+    #search-bar--icon-lens,
+    #search-bar--icon {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    #search-bar--icon-lens {
+        display: inline;
+        color: #fff;
+        background-color: #0065FC;
+        border-radius: 1.5rem;
+        width: 5rem;
+        height: 5rem;
+        vertical-align: middle;
+
+        transition: all 1s;
+    }
+
+    #search-bar--icon-lens:hover {
+        background-color:#FFCB00;
+        color: #9053C1;
+    }
+
+
+    #search-bar--btn {
+        display: none;
+    }
+
+    /* activities */
+    #activities-section--activities-single-images-bigger {
+        flex-basis: 50%;
+    }
+}
+
+
+/* breakpoint 448px */
+@media only screen and (max-width: 28em) {
+    main {
+        padding: 0;
+    }
+
+    #search-bar--container {
+        margin-left: 2rem;
+    }
+
+    h2 {
+        line-height: 1;
+    }
+
+    h1, 
+    #title--subtitle,
+    #filters--container,
+    #accomodations--numbers,
+    #activities-section--activities-title
+     {
+        padding: 0 2.5rem;
+    }
+
+    #accomodations-cards--container #accomodations-cards--list, 
+    #accomodations-cards--container #accomodations-cards--popular {
+        padding: 2.5rem;
+        gap: 2rem;
+        border-radius: 0;
+    }
+
+    #accomodations-cards--list {
+        flex-flow: column;
+    }
+
+    #accomodations-cards--container #accomodations-cards--list {
+        background-color: #fff;
+    }
+
+    #accomodations-cards--container figure img:not(img.accomodations-cards--popular-images) {
+        height: 12rem;
+    }
+
+    #accomodations-cards--popular {
+        order: -1;
+    }
+
+    #accomodations-cards--popular--title-container {
+        padding-top: 2rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #activities-section {
+        padding: 2.5rem;
+        gap: 2.5rem;
+    }
+
+    .activities-section--activities-double-images {
+        gap: 2.5rem;
+    }
+
+    #activities-section--activities-container {
+        flex-flow: column wrap;
+    }
+
+    #activities-section--activities-title {
+        margin-bottom: 2.5rem;
+        padding-left: 0;
+    }
+
+    #activities-section--activities-responsive-double {
+        flex-wrap: wrap;
+    }
+
+    #activities-section--activities-container img {
+        height: 13rem;
+    }
+
+    /* footer */
+    #footer {
+        flex-flow: column wrap;
+    }
+}
