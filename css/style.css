@@ -60,7 +60,7 @@ a:visited {
     color: #1B1212;
 }
 
-@media only screen and (hover: hover) {
+@media (hover: hover) {
     a:hover {
         color: #0065FC;
     }
@@ -128,9 +128,8 @@ header {
     justify-self: flex-end;    
 }
 
-@media only screen and (hover: hover) {
-    .main-nav--links:hover,
-    #main-nav--signup:hover {
+@media (hover: hover) {
+    .main-nav--links:hover {
         border-top: 2px solid #0065FC;
     }
 }
@@ -380,7 +379,7 @@ h1 {
     font-weight: 700;
 }
 
-@media only screen and (hover: hover) {
+@media (hover: hover) {
     .accomodations-cards--card:hover a {
         color: #0065FC;
     }
@@ -449,7 +448,7 @@ h1 {
     transition: transform 1s, -webkit-transform 1s;
 }
 
-@media only screen and (hover:hover) {
+@media (hover: hover) {
     .accomodations-cards--card:hover {
         -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
@@ -634,7 +633,7 @@ h1 {
     transition: transform 1s, -webkit-transform 1s;
 }
 
-@media only screen and (hover: hover) {
+@media (hover: hover) {
     .activities-section--activities-images-container:hover {
         -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
